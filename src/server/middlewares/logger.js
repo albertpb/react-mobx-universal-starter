@@ -1,10 +1,14 @@
+/* @flow */
+
+import type { $Request, $Response } from 'express';
+import type { $Tokens } from 'morgan';
 import log from 'winston';
 import chalk from 'chalk';
 
 // set log as cli mode
 log.cli();
 
-function logServerConfig(err) {
+function logServerConfig(err: string) {
   if (err) log.error(err);
 
   const url = ['http://', process.env.HOST, ':', process.env.PORT].join('');
@@ -16,7 +20,7 @@ function logServerConfig(err) {
   log.info(chalk.red('=========================================='));
 }
 
-function colorfulLog(tokens, req, res) {
+function colorfulLog(tokens: $Tokens, req: $Request, res: $Response) {
   var status = tokens.status(req, res);
   var statusColor = status >= 500
     ? 'red'

@@ -1,0 +1,14 @@
+[ignore]
+./node_modules/.*
+./build/.*
+
+[include]
+./src/.*
+
+[libs]
+
+[options]
+esproposal.decorators=ignore
+module.name_mapper.extension='css' -> '<PROJECT_ROOT>/src/flow/stub/css-modules.js'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/src/flow/stub/css-modules.js'
+module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> '<PROJECT_ROOT>/src/flow/stub/url-loader.js'

@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
@@ -10,7 +12,7 @@ export default class Home extends Component {
     store: PropTypes.object,
   };
 
-  setSelectedId(id) {
+  setSelectedId(id: string) {
     this.props.store.user.setSelectedId(id);
   }
 

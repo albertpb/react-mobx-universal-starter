@@ -1,3 +1,5 @@
+/* @flow */
+
 // Enable ES6
 // Prevents Babel from transpiling server-side bundle
 // resulting in faster server-side hot-reload (startup) times.

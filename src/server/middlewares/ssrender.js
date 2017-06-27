@@ -1,3 +1,6 @@
+/* @flow */
+
+import type { $Request, $Response } from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { matchPath } from 'react-router-dom';
@@ -7,7 +10,7 @@ import { routes } from '../../shared/routes/routes';
 import Stores from '../../shared/stores/stores';
 import { Provider } from 'mobx-react';
 
-export default (req, res) => {
+export default (req: $Request, res: $Response) => {
   const context = {};
 
   let promises = [];

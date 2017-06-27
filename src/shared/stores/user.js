@@ -1,3 +1,5 @@
+/* @flow */
+
 import { observable } from 'mobx';
 import axios from 'axios';
 import _ from 'lodash';
@@ -8,7 +10,7 @@ export default class UserStore {
 
   @observable selectedId = '';
 
-  constructor(initialState) {
+  constructor(initialState: (?number)[] = [null]) {
     _.forEach(initialState, (value, key) => {
       switch (key) {
         case 'data':
@@ -37,7 +39,7 @@ export default class UserStore {
   }
 
   @action
-  setSelectedId(id) {
+  setSelectedId(id: string) {
     this.selectedId = id;
   }
 }

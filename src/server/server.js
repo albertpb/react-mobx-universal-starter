@@ -1,4 +1,5 @@
-import http from 'http';
+/* @flow */
+
 import express from 'express';
 import serveStatic from 'serve-static';
 import ssrender from './middlewares/ssrender';
@@ -8,7 +9,6 @@ import { logServerConfig, colorfulLog } from './middlewares/logger';
 
 export default () => {
   const app = express();
-  const server = http.createServer(app);
 
   app.use(morgan(colorfulLog));
 
@@ -20,7 +20,7 @@ export default () => {
   app.use('/build/server/', serveStatic(Dir.server));
   app.use(ssrender);
 
-  server.listen(process.env.PORT, process.env.HOST, err =>
+  app.listen(process.env.PORT || 3000, process.env.HOST || '0.0.0.0', err =>
     logServerConfig(err),
   );
 };

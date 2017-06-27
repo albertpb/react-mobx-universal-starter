@@ -1,3 +1,5 @@
+/* @flow */
+
 // Enables proper source map support in Node.js
 import 'source-map-support/register';
 
