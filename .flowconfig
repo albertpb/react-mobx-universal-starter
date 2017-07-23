@@ -1,14 +1,34 @@
 [ignore]
-./node_modules/.*
-./build/.*
+.*node_modules/.*
+.*/build/.*
 
 [include]
-./src/.*
+.*/src/.*
 
 [libs]
+/flow-typed/package-dep-libdefs.js
+/flow-typed/libdefs.js
 
 [options]
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.jsx
+module.file_ext=.css
+module.file_ext=.scss
+module.file_ext=.less
+
+module.system=haste
+
 esproposal.decorators=ignore
-module.name_mapper.extension='css' -> '<PROJECT_ROOT>/src/flow/stub/css-modules.js'
-module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/src/flow/stub/css-modules.js'
-module.name_mapper='.*\.\(svg\|png\|jpg\|gif\)$' -> '<PROJECT_ROOT>/src/flow/stub/url-loader.js'
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+; Avoid CSS modules error
+module.name_mapper='\.(css|scss|less)$' -> '<PROJECT_ROOT>/flow-typed/css-modules.js'
+
+module.name_mapper='\.(svg|png|jpg|gif)$' -> '<PROJECT_ROOT>/flow-typed/url-loader.js'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+suppress_type=$FlowExpectedError
