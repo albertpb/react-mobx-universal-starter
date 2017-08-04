@@ -2,8 +2,8 @@
 
 import type { Stores } from '../stores/stores';
 import type { $MatchPath } from 'react-router-dom';
-import Home from '../containers/Home/home';
-import UserDetail from '../containers/UserDetail/userDetail';
+import Home from '../containers/Home';
+import UserDetail from '../containers/UserDetail';
 
 const routes = [
   {

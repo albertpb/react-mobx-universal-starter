@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { matchPath } from 'react-router-dom';
 import { StaticRouter } from 'react-router';
-import App from '../../shared/containers/App/app';
+import App from '../../shared/containers/App';
 import { routes } from '../../shared/routes/routes';
 import Stores from '../../shared/stores/stores';
 import { Provider } from 'mobx-react';
@@ -27,7 +27,7 @@ export default (req: $Request, res: $Response) => {
 
   Promise.all(promises).then(() => {
     const html = ReactDOMServer.renderToString(
-      <Provider store={stores}>
+      <Provider stores={stores}>
         <StaticRouter location={req.url} context={context}>
           <App />
         </StaticRouter>

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Home with user store render Home 1`] = `
+<Home
+  stores={
+    Stores {
+      "user": UserStore {
+        "data": Array [
+          Object {
+            "email": "tdewdeny0@oakley.com",
+            "first_name": "Trueman",
+            "gender": "Male",
+            "id": 1,
+            "ip_address": "227.154.111.182",
+            "last_name": "Dewdeny",
+          },
+          Object {
+            "email": "dmartinets1@gravatar.com",
+            "first_name": "Derek",
+            "gender": "Male",
+            "id": 2,
+            "ip_address": "82.53.252.253",
+            "last_name": "Martinets",
+          },
+          Object {
+            "email": "dpavyer2@phpbb.com",
+            "first_name": "Dino",
+            "gender": "Male",
+            "id": 3,
+            "ip_address": "206.150.238.74",
+            "last_name": "Pavyer",
+          },
+          Object {
+            "email": "rfaherty3@cmu.edu",
+            "first_name": "Rakel",
+            "gender": "Female",
+            "id": 4,
+            "ip_address": "134.50.37.87",
+            "last_name": "Faherty",
+          },
+          Object {
+            "email": "dtrevan4@github.com",
+            "first_name": "Dallis",
+            "gender": "Male",
+            "id": 5,
+            "ip_address": "245.239.238.230",
+            "last_name": "Trevan",
+          },
+          Object {
+            "email": "aduigan5@businessweek.com",
+            "first_name": "Abie",
+            "gender": "Male",
+            "id": 6,
+            "ip_address": "192.222.148.191",
+            "last_name": "Duigan",
+          },
+          Object {
+            "email": "kmulliss6@tripadvisor.com",
+            "first_name": "Kenyon",
+            "gender": "Male",
+            "id": 7,
+            "ip_address": "204.185.198.229",
+            "last_name": "Mulliss",
+          },
+          Object {
+            "email": "aearry7@independent.co.uk",
+            "first_name": "Alan",
+            "gender": "Male",
+            "id": 8,
+            "ip_address": "174.108.84.146",
+            "last_name": "Earry",
+          },
+          Object {
+            "email": "lmarchbank8@dot.gov",
+            "first_name": "Lisha",
+            "gender": "Female",
+            "id": 9,
+            "ip_address": "163.42.163.62",
+            "last_name": "Marchbank",
+          },
+          Object {
+            "email": "aturone9@sohu.com",
+            "first_name": "Averil",
+            "gender": "Male",
+            "id": 10,
+            "ip_address": "9.181.131.233",
+            "last_name": "Turone",
+          },
+        ],
+        "selectedId": "",
+      },
+    }
+  }
+/>
+`;

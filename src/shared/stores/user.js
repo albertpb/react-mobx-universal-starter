@@ -1,9 +1,9 @@
 /* @flow */
 
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 import axios from 'axios';
+import { config } from '../../config';
 import _ from 'lodash';
-import { action } from 'mobx';
 
 export default class UserStore {
   @observable data = [];
@@ -26,7 +26,7 @@ export default class UserStore {
   fetchData() {
     const p = new Promise((resolve, reject) => {
       axios
-        .get('http://www.mocky.io/v2/59513eba1200009b128c7af2')
+        .get('http://www.mocky.io/v2/59513eba1200009b128c7af2', config.axios)
         .then(response => {
           this.data = response.data;
           resolve();

@@ -1,34 +1,41 @@
 {
-    "parser": "babel-eslint",
-    "plugins": [
-        "react",
-        "prettier"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "env": {
-        "es6":     true,
-        "browser": true,
-        "node":    true,
-        "mocha":   true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "rules":{
-        "no-console": 0,
-        "prettier/prettier": ["error", {
-          "singleQuote": true,
-          "trailingComma": "all",
-          "bracketSpacing": true,
-          "jsxBracketSameLine": true,
-          "parser": "babylon"
-        }]
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "prettier",
+    "jest"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
     }
+  },
+  "env": {
+    "es6":     true,
+    "browser": true,
+    "node":    true,
+    "mocha":   true,
+    "jest/globals": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
+  "rules":{
+    "no-console": 0,
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": true,
+      "parser": "babylon"
+    }],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/valid-expect": "error"
+  }
 }

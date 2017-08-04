@@ -1,3 +1,5 @@
+'use strict';
+
 import Dir from '../src/config/dir';
 import merge from 'webpack-merge';
 import isDev from 'isdev';

@@ -17,7 +17,7 @@ export default class Stores {
   // Here you add all the stores.
   user = new UserStore();
 
-  constructor(initialState: (?number)[] = [null]) {
+  constructor(initialState: ?(mixed[])) {
     // Set the intial value to each corresponding store
     _.forEach(initialState, (value, key) => {
       switch (key) {

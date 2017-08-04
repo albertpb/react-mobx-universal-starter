@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 
-@inject('store')
+@inject('stores')
 @observer
 export default class Home extends Component {
   static propTypes = {
-    store: PropTypes.object,
+    stores: PropTypes.object,
   };
 
   setSelectedId(id: string) {
-    this.props.store.user.setSelectedId(id);
+    this.props.stores.user.setSelectedId(id);
   }
 
   render() {
-    const userList = this.props.store.user.data.map((user, key) => {
+    const userList = this.props.stores.user.data.map((user, key) => {
       return (
         <div key={key}>
           <Link to="/user" onClick={this.setSelectedId.bind(this, user.id)}>
@@ -30,7 +30,9 @@ export default class Home extends Component {
     return (
       <div>
         <p>User List</p>
-        <div>{userList}</div>
+        <div>
+          {userList}
+        </div>
       </div>
     );
   }

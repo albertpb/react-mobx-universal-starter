@@ -5,16 +5,16 @@ import { inject, observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-@inject('store')
+@inject('stores')
 @observer
 export default class UserDetail extends Component {
   static propTypes = {
-    store: PropTypes.object,
+    stores: PropTypes.object,
   };
 
   render() {
-    const userSelected = _.find(this.props.store.user.data, u => {
-      return u.id === this.props.store.user.selectedId;
+    const userSelected = _.find(this.props.stores.user.data, u => {
+      return u.id === this.props.stores.user.selectedId;
     });
 
     return (
